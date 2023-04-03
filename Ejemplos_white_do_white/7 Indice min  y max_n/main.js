@@ -1,6 +1,33 @@
-//hacer un programa  . ingrese numeros . que el programa te diga cual es el primer menor y el segundo menor 
+/*hacer un programa  . ingrese numeros . que el programa te diga cual es el primer menor y el segundo menor */
 
 let n = parseInt(prompt("ingrese numero"));
+let m1 = n;
+let bandera=0;
+let m2 =m1
+
+
+
+while(n!== 0){
+    n = parseInt(prompt("ingrese numero"));
+    while(n<m1 && n!==0){
+        m2=m1;
+        m1=n;
+    }
+
+    while(bandera!==0){
+        m2=n;
+        bandera++
+            while(n<m2 && n!==0){
+                m2=n
+
+            }
+    }
+}
+
+while(n==0){
+    alert("primer lugar "+ m1 +" segundo puesto "+ m2)
+    if(n==0)break
+}
 
 
 
