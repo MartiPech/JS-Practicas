@@ -32,7 +32,7 @@ while (divisor < numero) {
 }
 
 if (es_primo) {
-    console.log(numero + " es primo.");
+    alert(numero + " es primo.");
 } else {
-    console.log(numero + " no es primo.");
+    alert(numero + " no es primo.");
 }
