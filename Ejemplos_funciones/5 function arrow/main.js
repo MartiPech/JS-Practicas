@@ -1,4 +1,5 @@
 
+//funcion declarada
 const modelo_1 = function(){
     console.log("modelo 1");
 }
