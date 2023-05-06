@@ -1,3 +1,4 @@
+
 function valores_console(){
     console.log ("N°1");
     console.log ("N°2");
@@ -33,3 +34,7 @@ console.log(val_2);
 
 // ojo ahora no imprime hasta el final . sino cuando el copilador lee return . lo devuelve y todo lo que esta por debajo lo ignora.
 
+const suma = function suma(a,b){
+    return a + b;
+}
+console.log(suma(4,3));
