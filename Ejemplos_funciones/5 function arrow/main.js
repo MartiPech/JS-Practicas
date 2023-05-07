@@ -49,8 +49,12 @@ let nombre2 = mayuscula(`lucifer`)/*ACA SOLO GUARDO LA FUNCION DE LO QUE RETORMA
 console.log(nombre2);
 
 // MISMO CODIGO VERSION MAS CORTO 
-/*podemos ver lo siguente lo returno sin ponder return , esta implicito el return en las arrow . es mas "(nombre3)" puede ir sin parentesis  */
+/*podemos ver lo siguente lo returno sin ponder return , esta implicito el return en las arrow . es mas "(nombre3)" puede ir sin parentesis y sin llave "{} pero si es una sola linea , si es mas ahi si o si van las llaves"  */
 const mayuscula3 = (nombre3) => nombre3.toUpperCase()
 let nombre3 = mayuscula3(`caliban`);
 console.log(nombre3)
 /*una forma que puedo leer mayuscula3 es . el parametro que entra => HACELE ESTO Y POR DEFAULT ME LO RETURNA */ 
+
+// DATO 
+let obj = () => ({nombre:"bob", apellido:"marx",edad:18})
+//A la hora de poner unn obj en una function arrow ponerle " ( )" para que no tire error 
