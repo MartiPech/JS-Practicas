@@ -8,3 +8,9 @@ function NumMayor(a,b){
 
 console.log(NumMayor(66,4));
 document.write(NumMayor(555,777));
+
+
+saludar();
+var saludar = function(){
+    console.log(`HollllaaaaaS`)
+}
