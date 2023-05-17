@@ -11,3 +11,5 @@ function mayusculas(arr){
 }
 
 console.log(mayusculas(array))
+
+/* */
