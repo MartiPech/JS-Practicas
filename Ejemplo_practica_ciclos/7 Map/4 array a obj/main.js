@@ -3,3 +3,5 @@
 let arr = ["marta", "eduardo" , "mabel"];
 const ObjLongitud = arr.map(e=>({nombre:e, longitud:e.length}))
 console.log(ObjLongitud)
+
+
