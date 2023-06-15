@@ -24,3 +24,6 @@ for(nim in obj){
 console.log(objSum);
 
 
+
+
+
