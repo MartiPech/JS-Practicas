@@ -12,5 +12,5 @@ innerHTML ... con esto le indico que devuelva algo al id
 */
 
 function mostrar2(){
-    document.getElementById("seleccion2").innerHTML=Date()
+    document.getElementById("seleccion2").innerHTML = Date()
 }
