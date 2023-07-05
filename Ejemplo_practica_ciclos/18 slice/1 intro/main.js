@@ -5,6 +5,6 @@ console.log(resultado)
 
 
 let array2 = ["manzana", "pera", "mandarina", "kiwi" ,"ciruela"]
-//star , end ... se para en el star y el end inclusivo no lo toma . entre el rango
+//star , end ... se para en el star y el end inclusivo no lo toma . solo  entre el rango
 let resultado2 = array2.slice(2,4)
 console.log(resultado2)
