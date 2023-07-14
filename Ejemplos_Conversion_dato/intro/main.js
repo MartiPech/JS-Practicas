@@ -54,8 +54,3 @@ if(ricardo&&ricardo==0){
 }
 //cero es un numero pero tambien es un false en booleano y js le da mas peso al booleano .
 //en una situacion como esta . tenerla encuenta y poner esta solucion.
-
-
-
-
-
