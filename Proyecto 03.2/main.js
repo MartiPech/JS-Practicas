@@ -1,4 +1,4 @@
-import{libro,celulares} from "./Precios.js";
+import{libro,celulares} from  "./Precios.js";
 
 
 
@@ -30,6 +30,6 @@ function obtenerData(enlace){
     'Kindler': libro,
     'Xiaomi': celulares
     };
-    info[enlace];
+    return info[enlace];
 };
 
