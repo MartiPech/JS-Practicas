@@ -1,0 +1,24 @@
+## Nodo appendChild
+
+Agrega un nuevo nodo al final
+
+Crea un nuevo elemento párrafo, y lo agrega al final del cuerpo del documento
+
+var p = document.createElement("p");
+document.body.appendChild(p);
+
+## innerText con innerHtml
+
+1. innerText: La propiedad innerText se utiliza para acceder o modificar el contenido textual visible de un elemento.
+
+2. innerHTML: La propiedad innerHTML se utiliza para acceder o modificar tanto el contenido textual como los elementos HTML internos de un elemento.
+
+Es importante tener en cuenta que el uso de innerHTML puede ser riesgoso cuando se manipulan datos ingresados por usuarios, ya que puede exponer a ataques de inyección de código si no se sanitizan correctamente los valores ingresados.
+
+En resumen, innerText se encarga del contenido de texto visible y no interpreta HTML, mientras que innerHTML también incluye etiquetas HTML y puede manipular el contenido interno de un elemento.
+
+## innerText y textContent
+
+1. textContent devuelve el contenido completo de un elemento, incluyendo todo el texto y nodos hijos, sin importar si están ocultos o no.
+
+2. innerText devuelve el contenido visible de un elemento, excluyendo cualquier contenido que esté oculto mediante CSS

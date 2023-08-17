@@ -1,40 +1,51 @@
-let ApiKey = 'c5d3f02cd0bc260506d4355066d90f33';
-let DifKelvin = 273.15;
-let urlBase = 'https://api.openweathermap.org/data/2.5/weather';
+let apiKey = "c5d3f02cd0bc260506d4355066d90f33";
+let url = `https://api.openweathermap.org/data/2.5/weather`
+let kelvin = 273.15;
+
 
 document.getElementById("botonBusqueda").addEventListener('click', ()=>{
-    const ciudad = document.getElementById("ciudadEntrada").value ;
+    let ciudad = document.getElementById("ciudadEntrada").value;
     if(ciudad){
-        fetchDatosClima(ciudad)
+        fetchdata(ciudad);
     }else{
-        alert("Por favor introduzca una ciudad");
+        alert("Por favor ponga una ciudad");
     }
 });
 
-function fetchDatosClima(ciudad){
-    fetch(`${urlBase}?q=${ciudad}&appid=${ApiKey}`)
-        .then(response => response.json())
-        .then(response => mostrarDatosClima(response))
+
+
+function fetchdata(ciudad){
+    fetch(`${url}?q=${ciudad}&appid=${apiKey}`)
+    .then(response => response.json())
+    .then(response => monstrarclima(response));
 };
 
-function mostrarDatosClima(response){
+function monstrarclima(response){
     console.log(response);
     const divDatosClima = document.getElementById("datosClima");
-    divDatosClima.innerHTML="";
+        divDatosClima.innerHTML= "";
+    const ciudadaTitulo = response.name
+    const ciudadaTemperatura = response.main.temp;
+    const ciudadaDescription = response.weather[0].description
+    const ciudadHumedad = response.main.humidity;
 
-    const ciudadNombre = response.name;
-    const temperatura = response.main.temp;
-    const descripcion = response.weather[0].description;
 
-    const ciudadTitulo = document.createElement('h2');
-    const ciudadTemperatura = document.createElement('p');
-    const ciudadDescripcion = document.createElement('p');
+    const titulo = document.createElement('h2');
+    const temperatura = document.createElement('p');
+    const descripcion = document.createElement('p');
+    const humedad = document.createElement('p');
 
-    ciudadTitulo.textContent = ciudadNombre ;
-    ciudadTemperatura.textContent = `La temperatura es de : ${Math.floor(temperatura - DifKelvin)}°C` ;
-    ciudadDescripcion.textContent = `El cielo se encuentra : ${descripcion}`;
+    titulo.textContent = ciudadaTitulo;
+    temperatura.textContent = `La temperatura es de : ${Math.floor(ciudadaTemperatura-kelvin)}°C`;
+    descripcion.textContent = `El cielo se encuentra : ${ciudadaDescription}`;
+    humedad.textContent = `Con una humedad de: ${ciudadHumedad}%`
 
-    divDatosClima.appendChild(ciudadTitulo);
-    divDatosClima.appendChild(ciudadTemperatura);
-    divDatosClima.appendChild(ciudadDescripcion);
-};
+    
+    divDatosClima.appendChild(titulo)
+    divDatosClima.appendChild(temperatura)
+    divDatosClima.appendChild(descripcion)  
+    divDatosClima.appendChild(humedad) 
+    
+    
+}
+
