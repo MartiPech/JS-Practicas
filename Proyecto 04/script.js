@@ -28,21 +28,25 @@ function monstrarclima(response){
     const ciudadaTemperatura = response.main.temp;
     const ciudadaDescription = response.weather[0].description
     const ciudadHumedad = response.main.humidity;
+    const ciudadIcono = response.weather[0].icon
 
 
     const titulo = document.createElement('h2');
     const temperatura = document.createElement('p');
+    const icono = document.createElement('img')
     const descripcion = document.createElement('p');
     const humedad = document.createElement('p');
 
     titulo.textContent = ciudadaTitulo;
     temperatura.textContent = `La temperatura es de : ${Math.floor(ciudadaTemperatura-kelvin)}°C`;
     descripcion.textContent = `El cielo se encuentra : ${ciudadaDescription}`;
+    icono.src = `https://openweathermap.org/img/wn/${ciudadIcono}@2x.png` 
     humedad.textContent = `Con una humedad de: ${ciudadHumedad}%`
 
     
     divDatosClima.appendChild(titulo)
     divDatosClima.appendChild(temperatura)
+    divDatosClima.appendChild(icono)
     divDatosClima.appendChild(descripcion)  
     divDatosClima.appendChild(humedad) 
     
