@@ -12,7 +12,7 @@ console.log(enlaces);
 enlaces.forEach(function(enlace){
     enlace.addEventListener('click',function(){
         enlaces.forEach(function(enlace){
-            enlace.classList.remove('active');
+        enlace.classList.remove('active');
         });
         enlace.classList.add('active');
         let dataContenido = obtenerData(enlace.textContent);
